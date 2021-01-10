@@ -40,7 +40,7 @@ void Widget::executeCommand()
     arguments << "-o";
     if(ui->checkBox_autonumber->isChecked())
     {
-        arguments << (downloadDirecotry + "%(autonumber)s-%(title)s-%(id)s.%(ext)s");
+        arguments << (downloadDirecotry + "%(autonumber)s-%(uploader)s-%(playlist_title)s-%(title)s-%(id)s.%(ext)s");
     }
     else
     {
