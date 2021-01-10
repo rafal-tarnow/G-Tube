@@ -49,6 +49,14 @@ void Widget::executeCommand()
 
     arguments << videoURL;
 
+    if(ui->checkBox_aria2c->isChecked())
+    {
+        arguments << "--external-downloader";
+        arguments << "aria2c";
+        arguments << "--external-downloader-args";
+        arguments << "-x 16 -s 16 -k 1M";
+    }
+
     process->start("youtube-dl", arguments);
 }
 
